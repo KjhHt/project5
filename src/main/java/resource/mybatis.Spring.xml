@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="toto.vo.OeGameResult" alias="oegame"/>
+		<typeAlias alias="oneoneinq" type="toto.vo.OneOneinq"/>
+		<typeAlias alias="rpsgameresult" type="toto.vo.RPSGameResult"/>
+		<typeAlias alias="totologin" type="toto.vo.Totologin2"/>
+		<typeAlias alias="notice" type="toto.vo.Notice"/>
+		<typeAlias alias="soccer" type="toto.vo.Soccer"/>
+		<typeAlias alias="faq" type="toto.vo.Faq"/>
+		<typeAlias alias="cal" type="toto.vo.Calendar"/>
+		<typeAlias alias="clo" type="toto.vo.Closing"/>
+		<typeAlias alias="mypoint" type="toto.vo.Mypoint"/>
+		<typeAlias alias="acc" type="toto.vo.Account"/>
+	</typeAliases>
+    <mappers>
+        <mapper resource="resource/testMapper.xml"/>
+        <mapper resource="resource/mapper/oeGameMapper.xml"/>
+        <mapper resource="resource/mapper/RPSGameMapper.xml"/>
+        <mapper resource="resource/mapper/OneOneinqMapper.xml"/>
+        <mapper resource="resource/mapper/LoginMapper.xml"/>
+        <mapper resource="resource/mapper/NoticeMapper.xml"/>
+        <mapper resource="resource/mapper/SoccerMapper.xml"/>
+        <mapper resource="resource/mapper/FaqMapper.xml"/>
+        <mapper resource="resource/mapper/CalMapper.xml"/>
+        <mapper resource="resource/mapper/CloMapper.xml"/>
+        
+    </mappers>
+</configuration>

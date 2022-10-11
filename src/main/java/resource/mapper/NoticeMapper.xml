@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="toto.dao.NoticeDao">
+	<select id="noticeList" resultType="notice"
+		parameterType="notice">
+		select *
+		FROM bet_Notice
+		WHERE 1=1
+		<if test="bt_title">
+			AND bt_title LIKE '%' ||#{bt_title}|| '%'
+		</if>
+	</select>
+
+
+</mapper>

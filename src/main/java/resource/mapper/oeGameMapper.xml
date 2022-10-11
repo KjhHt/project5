@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="toto.dao.OeGameDao">
+    <select id="getAccountIdPoint" parameterType="string" resultType="int">
+        select point from account where id=#{id}
+    </select>
+    <update id="updatePoint" parameterType="hashmap">
+        update account set point = #{point} where id = #{id}
+    </update>
+    <insert id="insertOeResult" parameterType="oegame">
+        insert into oegameresult
+        values ((select NVL(max(oegno),1)+1 from OeGameResult),
+                #{random}, #{choice}, #{win}, #{prevpoint}, #{resultpoint}, #{id})
+    </insert>
+    <select id="getOeGameResultList" parameterType="string" resultType="oegame">
+        select * from oegameresult where id = #{id}
+    </select>
+    <select id="getAuth" parameterType="string" resultType="int">
+        select auth from account where id = #{id}
+    </select>
+    <select id="schOeGameResult" parameterType="oegame" resultType="oegame">
+        select * from oegameresult
+        where 1=1
+        <if test="id != null">
+            and id like '%'||#{id}||'%'
+        </if>
+    </select>
+</mapper>

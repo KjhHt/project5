@@ -1,0 +1,9 @@
+jdbc.driver=oracle.jdbc.driver.OracleDriver
+# 개인pc DB
+jdbc.url=jdbc:oracle:thin:@localhost:1521:xe
+# 고정ip(DB서버) DB
+#jdbc.url=jdbc:oracle:thin:@210.205.120.236:1521:xe
+jdbc.user=p05
+jdbc.pass=1111
+#파일업로드 정보
+upload=C:/a02_javaexp/board/src/main/webapp/z01_fileupload/

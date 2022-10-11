@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+        <mapper namespace="toto.dao.FaqDao">
+		<select 
+		id="faqList" resultType="faq" parameterType="faq">
+		 select * 
+		 from bet_faq
+		 WHERE 1=1
+		 <if test="bt_question!=null">
+		 AND bt_question LIKE '%'||#{bt_question}||'%'
+		 </if>
+	</select>
+	</mapper>
